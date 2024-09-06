@@ -1,0 +1,45 @@
+<div class="container p-lg-5">
+
+    <div class="card border-0">
+        <div class="card-body p-0">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 p-0 graybg">
+                    <div class="form-side-content p-5">
+                        <div class="register-title text-center">
+                           
+                            <h4 class="formH4">LOGIN</h4>
+                        </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
+                            <div class="row">
+                             
+                                <div class="formGroup" >
+                                    <input type="email" class="form-control mb-2" formControlName="email" placeholder="Email Address">
+                                    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.status == 'INVALID' " class="alert alert-danger">
+                                        <p *ngIf="loginForm.get('email')?.getError('required')">Email Required !</p>
+                                        <p *ngIf="loginForm.get('email')?.getError('email')">Enter Valid Email!</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="formGroup">
+        
+                                    <input type="password" class="form-control mb-4" formControlName="password" placeholder="Password">
+                                    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.status == 'INVALID' " class="alert alert-danger">
+                                        <p *ngIf="loginForm.get('password')?.getError('required')">Password Required !</p>
+                                        <p *ngIf="loginForm.get('password')?.getError('minlength')">Password is at least 6 Characters !</p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn w-100 py-2">Continue</button>
+                        </form>
+                       
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

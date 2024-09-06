@@ -1,0 +1,46 @@
+.homeSlider{
+    background: url('../../../../../public/homeSec.png') center  no-repeat;
+    width: 100%;
+    height: 810px;
+}
+.home-intro{
+    width: 40%;
+    position: relative;
+    top: 20%;
+    left: 5%;
+}
+.intro-head{
+    font-size: 48px;
+font-weight: bold;
+font-style: normal;
+text-align: left;
+color: #354e57;
+}
+
+.intro-body{
+    font-size: 16px;
+font-weight: normal;
+line-height: 24px;
+font-style: normal;
+text-align: left;
+color: #354e57;
+}
+
+
+.shop-btn{
+    border: 1px solid var(--lightGray);
+    border-radius: 0px;
+    padding: 3px 10px;
+    width: 30%;
+
+}
+.shop-btn:hover{
+    border: 1px solid red;
+   box-shadow: #2e2e22;
+    
+
+}
+.products-section{
+    display: flex !important;
+}
+

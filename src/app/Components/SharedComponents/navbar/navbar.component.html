@@ -1,0 +1,34 @@
+<div class="w-100 upper-navbar"></div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center ps-0">
+    <div class="container justify-content-center">
+      <a class="navbar-brand eshop-btn" routerLink="home">
+        <img src="../../../assets/images/logo.png" class="logo-img" alt="">
+     EShop
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-25" id="navbarSupportedContent" >
+      
+       
+        <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+         
+            <li  class="nav-item  m-2">
+                <a class="nav-link btn " id="joinFree-btn" aria-current="page" routerLink="favorite">Favorite</a>
+            </li>
+            <li   class="nav-item  m-2">
+                <a class="nav-link btn " id="joinFree-btn" aria-current="page" routerLink="cart" >Cart</a>
+            </li>
+            <li *ngIf="!_AuthService.userToken "  class="nav-item  m-2">
+              <a class="nav-link btn" id="login-btn" routerLink="login">Login</a>
+            </li>
+            <li *ngIf="_AuthService.userToken "  class="nav-item  m-2">
+              <a (click)="_AuthService.logout()" class="nav-link btn" id="login-btn" routerLink="login">Logout</a>
+            </li>
+       
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+

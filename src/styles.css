@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: somatic;
+    src: url("./app/fonts/Somatic-Rounded.otf");
+  }
+
+  :root {
+    --darkGray: #293D45;
+    --lightGray: #354e57;
+    --secondary:#A67744;
+    --bgColor:#EEF3F4;
+  }
+
+  body{
+    color: var(--darkGray);
+    background-color: #EEF3F4;
+  }

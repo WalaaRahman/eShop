@@ -1,0 +1,33 @@
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-toggler {
+    position: relative;
+    left: 30% !important;
+}
+
+.eshop-btn {
+    font-family: 'somatic';
+    font-size: 32px;
+    font-weight: 200;
+    /* letter-spacing: 50px; */
+    line-height: 39px;
+}
+
+@media screen and (min-width:1024px) {
+
+    .eshop-btn {
+        position: relative;
+        left: 42%;
+    }
+}
+
+.upper-navbar {
+    background-color: var(--secondary);
+    height: 40px;
+}
+
+a {
+    color: var(--darkGray) !important;
+}
