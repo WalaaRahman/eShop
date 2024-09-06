@@ -19,6 +19,7 @@
     </div>
 </div>
 <!-- Taps and pills -->
+ <div class="container">
 <div class="work-content text-center ms-auto">
     <!-- navs & tabs -->
     <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
@@ -28,240 +29,90 @@
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-sun-tab" data-bs-toggle="pill" data-bs-target="#pills-sun"
-          type="button" role="tab" aria-controls="pills-sun" aria-selected="false">Brand</button>
+          type="button" role="tab" aria-controls="pills-sun" aria-selected="false">Sun</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-ezcema-tab" data-bs-toggle="pill" data-bs-target="#pills-ezcema"
-          type="button" role="tab" aria-controls="pills-ezcema" aria-selected="false">Design</button>
+          type="button" role="tab" aria-controls="pills-ezcema" aria-selected="false">Ezcema</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-psoriasis-tab" data-bs-toggle="pill" data-bs-target="#pills-psoriasis"
-          type="button" role="tab" aria-controls="pills-psoriasis" aria-selected="false">Graphic</button>
+          type="button" role="tab" aria-controls="pills-psoriasis" aria-selected="false">Psoriasis</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-vitiligio-tab" data-bs-toggle="pill" data-bs-target="#pills-vitiligio"
-          type="button" role="tab" aria-controls="pills-vitiligio" aria-selected="false">Graphic</button>
+          type="button" role="tab" aria-controls="pills-vitiligio" aria-selected="false">Vitiligio</button>
       </li>
 
     </ul>
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
         tabindex="0">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/1.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
+        <div class="row justify-content-center mb-3">
+          <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3">
+  
+              <app-product-card [productObject]="product" style="width: 100%;"></app-product-card>
+  
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/2.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/3.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/4.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/5.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/6.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  
+  
       </div>
-      <div class="tab-pane fade" id="pills-brand" role="tabpanel" aria-labelledby="pills-brand-tab" tabindex="0">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/4.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/6.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab" tabindex="0">
-
-
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/2.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
+      <div class="tab-pane fade" id="pills-sun" role="tabpanel" aria-labelledby="pills-sun-tab" tabindex="0">
+        <div class="row justify-content-center mb-3">
+          <div *ngFor="let product of sunProduct" class="products-section col-lg-3 col-md-3">
+  
+              <app-product-card [productObject]="product"></app-product-card>
+  
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/5.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+  
+  
       </div>
-      <div class="tab-pane fade" id="pills-graphic" role="tabpanel" aria-labelledby="pills-graphic-tab"
+      </div>
+      <div class="tab-pane fade" id="pills-ezcema" role="tabpanel" aria-labelledby="pills-ezcema-tab" tabindex="0">
+
+
+
+        <div class="row justify-content-center mb-3">
+          <div *ngFor="let product of ezcemaProduct" class="products-section col-lg-3 col-md-3">
+  
+              <app-product-card [productObject]="product"></app-product-card>
+  
+          </div>
+  
+  
+      </div>
+      </div>
+      <div class="tab-pane fade" id="pills-psoriasis" role="tabpanel" aria-labelledby="pills-psoriasis-tab"
         tabindex="0">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/1.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
+        <div class="row justify-content-center mb-3">
+          <div *ngFor="let product of psoriasisProduct" class="products-section col-lg-3 col-md-3">
+  
+              <app-product-card [productObject]="product"></app-product-card>
+  
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/3.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
+  
+  
+      </div>
+      </div>
+      <div class="tab-pane fade" id="pills-vitiligio" role="tabpanel" aria-labelledby="pills-vitiligio-tab"
+        tabindex="0">
+        <div class="row justify-content-center mb-3">
+          <div *ngFor="let product of vitiligioProduct" class="products-section col-lg-3 col-md-3">
+  
+              <app-product-card [productObject]="product"></app-product-card>
+  
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="portfolio-card position-relative">
-              <img src="images/portfolio/5.jpg" class="w-100" alt="">
-
-              <div class="img-overlay position-absolute  ">
-                <h6>Web Design</h6>
-                <div class="row row-icon gap-2">
-                  <span><i class="fa-solid fa-link-slash"></i></span>
-                  <span><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+  
+  
+      </div>
       </div>
     </div>
 
   </div>
-
+</div>
 <!-- Products -->
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-between mb-3">
         <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3">
 
@@ -272,4 +123,4 @@
 
     </div>
 
-</div>
+</div> -->

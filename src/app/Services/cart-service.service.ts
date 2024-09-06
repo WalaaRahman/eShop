@@ -1,9 +1,21 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import { AuthenticationService } from './authentication.service';
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
+  baseURL = 'https://assessment.caduceuslane.com';
+  constructor(private _HttpClient:HttpClient , private _authenticationService:AuthenticationService) { }
 
-  constructor() { }
+  addToCart(productID:string):Observable<any>{
+    return  this._HttpClient.post(this.baseURL +'/api/add-to-cart',{product:productID},{
+      headers:{
+        'Authorization': `Bearer ${localStorage.getItem("token")}`  
+        
+      
+      }
+    });
+  }
 }

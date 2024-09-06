@@ -32,6 +32,8 @@ color: #354e57;
     border-radius: 0px;
     padding: 3px 10px;
     width: 30%;
+   white-space: nowrap;
+
 
 }
 .shop-btn:hover{
@@ -40,7 +42,24 @@ color: #354e57;
     
 
 }
+
+.nav-pills .nav-link{
+    color: #1c1c1c !important;
+    background-color: var(--bgColor) !important;
+
+   
+}
+.nav-pills .nav-link.active{
+ 
+    border-bottom: 3px solid #A67744;
+    border-radius: 0px !important;
+}
 .products-section{
     display: flex !important;
 }
 
+@media only screen and  (min-width:375px) and (max-width:768px) {
+    .shop-btn{
+        width:80%
+    }
+}

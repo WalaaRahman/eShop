@@ -1,14 +1,14 @@
 
 <!-- <div class=""> -->
   <div class="card position-relative" >
-    <button class="btn fav-btn"><i class="fa-solid fa-heart"></i></button>
+    <button class="btn fav-btn" (click)="addToFav()"><i class="fa-solid fa-heart"></i></button>
     <img src={{productObject.image}} w="100" class="card-img-top" alt="...">
     <div class="card-body ps-0 ">
       <h5 class="card-title name">{{productObject.name}}</h5>
       <p class="card-text cat">{{productObject.category}}</p>
       <p class="card-text price">{{productObject.price}} EGP</p>
     </div>
-    <a href="#" class="btn cont-btn w-100 "><i class="fa-solid fa-cart-shopping fa-sm me-2"></i>Add To Cart</a>
+    <button class="btn cont-btn w-100 " (click)="addToCart('30')"><i class="fa-solid fa-cart-shopping fa-sm me-2"></i>Add To Cart</button>
   </div>
 
 

@@ -4,8 +4,8 @@ export interface Product {
         category: string,
         price: number,
         image: string,
-        review:string,
         description:string,
         rate: number
+        review:string,
     
 }
