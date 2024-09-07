@@ -20,34 +20,42 @@ constructor (private _sectionService:SectionService, private _cartService:CartSe
 }
 ngOnInit(){
   try {
-    this._cartService.getUserCart().subscribe({
-      next: res =>{
-        this.cartProducts=res.data.products
-        console.log(this.cartProducts);
-        for (let prod  of this.cartProducts) {
-         this.subTotal =Math.round((this.subTotal + prod.price) * 100) / 100 ;
-        }
-        let x =(this.subTotal * this.tax) + this.shipping;
-        this.estimatedTotal= Math.round(x * 100) /100
-      },
-      error: err=>{
-        console.log(err);
-        
-      }
-    })
+    this.getCart()
   } catch (error) {
     console.log(error);
     
   }
   
 }
+getTotals(){
+  for (let prod  of this.cartProducts) {
+    this.subTotal =Math.round((this.subTotal + prod.price) * 100) / 100 ;
+   }
+   let x =(this.subTotal * this.tax) + this.shipping;
+   this.estimatedTotal= Math.round(x * 100) /100
+}
+getCart(){
+  this._cartService.getUserCart().subscribe({
+    next: res =>{
+      this.cartProducts=res.data.products
+      console.log(this.cartProducts);
+      this.getTotals();
+    },
+    error: err=>{
+      console.log(err);
+      
+    }
+  })
+}
 
-
-deleteProduct(id:number){
+deleteProduct(id:number, price:number){
   this._cartService.deleteFromCart(id).subscribe({
     next : res =>{
       console.log(res);
-      
+      this.getCart();
+      this.subTotal = this.subTotal - price ;
+      // this.getTotals();
+
     },
     error : err =>{
       console.log(err);

@@ -1,0 +1,77 @@
+
+.cards-container{
+    border: 2px solid var(--lightGray);
+    border-radius: 6px;
+    height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px 10px;
+  scrollbar-color: var(--bgColor) var(--lightGray);
+    scrollbar-width:thin;
+    
+}
+
+.card{
+    border: transparent !important;
+}
+.heart-btn{
+    /* position: absolute;
+    top: 10px;
+    left:10px; */
+    width: auto;
+    height: auto;
+    background-color: var(--bgColor);
+    color: red !important;
+    border: transparent;
+    border-radius: 50%;
+
+}
+.heart-btn:hover .fa-heart{
+  
+cursor: pointer;
+color: var(--lightGray) ;
+}
+.card-body{
+    background-color: var(--bgColor);
+}
+.card-img-top{
+    height:200px;
+}
+
+.card-title{
+font-size: 12px;
+}
+
+.card-text{
+    font-size: 10px;
+}
+
+.btn-group{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.addToCart-btn{
+    border:1px solid var(--lightGray) !important;
+    height: 30px;
+    font-size: 10px;
+    width: 70%;
+}
+
+#checkout{
+    border-top: 3px solid var(--lightGray);
+}
+
+.estimatedTotal,
+.shipping,
+.tax,
+.subTotal{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checkout-btn{
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,7 +1,7 @@
 
 <!-- <div class=""> -->
   <div class="card position-relative" >
-    <button class="btn fav-btn" (click)="addToFav()"><i class="fa-solid fa-heart"></i></button>
+    <button class="btn fav-btn" (click)="addToFav(productObject.id)"><i class="fa-solid fa-heart"></i></button>
     <img src={{productObject.image}} w="100" class="card-img-top" alt="...">
     <div class="card-body ps-0 ">
       <h5 class="card-title name">{{productObject.name}}</h5>
