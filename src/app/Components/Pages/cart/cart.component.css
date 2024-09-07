@@ -53,7 +53,7 @@ font-size: 12px;
 }
 
 #checkout{
-    border-top: 3px solid var(--lightGray);
+    border-top: 3px solid var(--lightGray) !important;
 }
 
 .estimatedTotal,
@@ -69,3 +69,11 @@ font-size: 12px;
     justify-content: center;
 }
 
+.checkoutBtn{
+    border: 1px solid var(--lightGray);
+
+}
+
+.secName{
+    font-size: 30px;
+}

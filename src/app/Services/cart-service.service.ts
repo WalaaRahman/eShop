@@ -30,7 +30,8 @@ export class CartServiceService {
   }
 
   deleteFromCart(productID:number):Observable<any>{
-    return  this._HttpClient.post(this.baseURL +'/api/remove-form-cart',{product:productID},{
+    return  this._HttpClient.post(this.baseURL +'/api/remove-form-cart',{product:productID},
+      {
       headers:{
         'Authorization': `Bearer ${localStorage.getItem("token")}`  
         

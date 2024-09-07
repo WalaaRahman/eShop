@@ -1,4 +1,5 @@
 <div class="container mb-4">
+    <div class="secName"><b>Your Cart</b></div>
     <div class="cards-container">
         <div class="row">
             <div *ngFor="let product of cartProducts" class="col-md-3">
@@ -21,7 +22,7 @@
     </div>
 </div>
 <section id="checkout">
-    <div class="container  pt-4">
+    <div class="container mb-4 pt-4">
         <div class="subTotal">
             <p><b>SubTotal</b></p>
             <p><b>${{subTotal}}</b></p>
@@ -39,7 +40,7 @@
             <p><b>${{estimatedTotal}}</b></p>
         </div>
 <div class="checkout-btn">
-    <button class="w-25">Checkout</button>
+    <button class="w-25 checkoutBtn">Checkout</button>
 </div>
     </div>
 </section>

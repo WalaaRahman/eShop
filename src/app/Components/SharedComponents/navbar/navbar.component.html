@@ -1,8 +1,6 @@
 <div class="w-100 upper-navbar"></div>
 <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center ps-0">
-  <div>
-    <h2 class="secName">{{sectionName}}</h2>
-  </div>  
+ 
   <div class="container justify-content-center">
       <a class="navbar-brand eshop-btn" routerLink="home">
         <img src="../../../assets/images/logo.png" class="logo-img" alt="">
@@ -27,6 +25,11 @@
             </li>
             <li *ngIf="_AuthService.userToken "  class="nav-item  m-2">
               <a (click)="_AuthService.logout()" class="nav-link btn" id="login-btn" routerLink="login">Logout</a>
+            </li>
+            <li *ngIf="_AuthService.userToken "  class="nav-item  m-2">
+              <div class="img-container">
+                <img src={{userData.image}} alt="">
+              </div>
             </li>
        
          

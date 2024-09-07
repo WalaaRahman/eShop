@@ -51,12 +51,12 @@ sunProduct:Product [] =[];
 ezcemaProduct:Product [] =[];
 psoriasisProduct:Product [] =[];
 vitiligioProduct:Product [] =[];
+searchTerm:string='';
 
 loading:boolean = true;
-constructor(private _productsServiceService: ProductsServiceService , private _sectionService:SectionService){}
+constructor(private _productsServiceService: ProductsServiceService){}
 ngOnInit(){
   // console.log("hi");
-  console.log(this._sectionService.sectionName);
   
 try{
 this._productsServiceService.getProducts().subscribe({

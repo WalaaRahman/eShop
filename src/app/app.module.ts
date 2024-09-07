@@ -15,6 +15,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './Pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FavoriteComponent,
     CartComponent,
     HomeComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -58,7 +58,25 @@ color: #354e57;
     display: flex !important;
     justify-content: center;
 }
+.search{
+    position: relative;
+}
 
+.search-icon{
+    position: absolute;
+    right: 0px;
+    width: 55px;
+    height: 38px;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bgColor);
+    border: transparent !important;
+}
+.search-input{
+    border: 1px solid var(--secondary);
+}
 @media only screen and  (min-width:375px) and (max-width:768px) {
     .shop-btn{
         width:80%

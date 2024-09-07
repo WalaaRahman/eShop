@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SectionService } from '../../../Services/section.service';
 import { CartServiceService } from '../../../Services/cart-service.service';
 import { Product } from '../../../Interfaces/product';
 
@@ -14,8 +13,8 @@ export class CartComponent {
   estimatedTotal:number=0;
   shipping:number=40;
   tax:number=1.12;
-constructor (private _sectionService:SectionService, private _cartService:CartServiceService){
-  this._sectionService.sectionName ='Your Cart';
+constructor (private _cartService:CartServiceService){
+
 
 }
 ngOnInit(){

@@ -25,5 +25,15 @@ export class AuthenticationService {
     this.userToken = "";
     this._Router.navigate(['/login']);
   }
+
+  getUserData():Observable<any>{
+return this._HttpClient.get(this.baseURL+'/api/user-data',  {
+  headers:{
+    'Authorization': `Bearer ${localStorage.getItem("token")}`  
+    
+  
+  }
+})
+  }
 }
 

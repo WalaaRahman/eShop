@@ -13,7 +13,6 @@ export class LoginComponent {
 
   constructor(private _AuthService:AuthenticationService,private _Router: Router) { }
 
-
   loginForm: FormGroup = new FormGroup({
 
     "email": new FormControl(null,
@@ -45,7 +44,7 @@ export class LoginComponent {
             localStorage.setItem('token',response.token);
             this._AuthService.userToken=response.token;
             this._Router.navigate(['/home']);
-            // console.log(this._AuthService.userToken);
+          
             
           }
 
