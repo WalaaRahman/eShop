@@ -11,6 +11,7 @@ import { CartServiceService } from '../../../Services/cart-service.service';
 export class ProductCardComponent {
   constructor(private _authenticationService:AuthenticationService ,private _cartServiceService:CartServiceService, private _Router:Router){}
 @Input() productObject:Product = {
+  id:0,
   name: "",
   category: "",
   price:0,
@@ -30,7 +31,7 @@ addToFav(){
     
   }
 }
-addToCart(id:string){
+addToCart(id:number){
   
   if (!this._authenticationService.userToken  ) {
     this._Router.navigate(['/login']);
@@ -42,7 +43,7 @@ console.log({id});
     this._cartServiceService.addToCart(id).subscribe({
       next:(response)=>{
         console.log(response);
-       
+       alert("Product added to cart")
         
       },
       error: (err) => {

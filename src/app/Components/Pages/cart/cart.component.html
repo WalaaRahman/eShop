@@ -1,1 +1,45 @@
-<p>cart works!</p>
+<div class="container mb-4">
+    <div class="cards-container">
+        <div class="row">
+            <div *ngFor="let product of cartProducts" class="col-md-3">
+                <div class="card position-relative">
+                    <button class="delete-btn" (click)="deleteProduct(product.id)" ><i class="fa-solid fa-trash-can"></i></button>
+                    <img src={{product.image}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">${{product.price}}</p>
+                        <div class="btn-group w-100 mb-0">
+                            <button class="plus w-25">+</button>
+                            <p class="prodNum w-50 d-flex  align-items-center justify-content-center">1</p>
+                            <button class="minus w-25">-</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="checkout">
+    <div class="container  pt-4">
+        <div class="subTotal">
+            <p><b>SubTotal</b></p>
+            <p><b>${{subTotal}}</b></p>
+        </div>
+        <div class="tax">
+            <p><b>Tax</b> (calculated in checkout)</p>
+            <p><b>12%</b></p>
+        </div>
+        <div class="shipping">
+            <p><b>Shipping</b> (free standard over $40)</p>
+            <p><b>$40</b></p>
+        </div>
+        <div class="estimatedTotal">
+            <p><b>Estimated Total</b></p>
+            <p><b>${{estimatedTotal}}</b></p>
+        </div>
+<div class="checkout-btn">
+    <button class="w-25">Checkout</button>
+</div>
+    </div>
+</section>

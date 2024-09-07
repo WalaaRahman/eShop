@@ -49,8 +49,14 @@
       <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
         tabindex="0">
         <div class="row justify-content-center mb-3">
-          <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3">
-  
+          <div *ngIf="loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+
+          <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3 col-sm-6">
+            
               <app-product-card [productObject]="product" style="width: 100%;"></app-product-card>
   
           </div>
@@ -60,7 +66,12 @@
       </div>
       <div class="tab-pane fade" id="pills-sun" role="tabpanel" aria-labelledby="pills-sun-tab" tabindex="0">
         <div class="row justify-content-center mb-3">
-          <div *ngFor="let product of sunProduct" class="products-section col-lg-3 col-md-3">
+          <div *ngIf="loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div *ngFor="let product of sunProduct" class="products-section col-lg-3 col-md-3 col-sm-6">
   
               <app-product-card [productObject]="product"></app-product-card>
   
@@ -74,7 +85,12 @@
 
 
         <div class="row justify-content-center mb-3">
-          <div *ngFor="let product of ezcemaProduct" class="products-section col-lg-3 col-md-3">
+          <div *ngIf="loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div *ngFor="let product of ezcemaProduct" class="products-section col-lg-3 col-md-3 col-sm-6">
   
               <app-product-card [productObject]="product"></app-product-card>
   
@@ -86,7 +102,12 @@
       <div class="tab-pane fade" id="pills-psoriasis" role="tabpanel" aria-labelledby="pills-psoriasis-tab"
         tabindex="0">
         <div class="row justify-content-center mb-3">
-          <div *ngFor="let product of psoriasisProduct" class="products-section col-lg-3 col-md-3">
+          <div *ngIf="loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div *ngFor="let product of psoriasisProduct" class="products-section col-lg-3 col-md-3 col-sm-6">
   
               <app-product-card [productObject]="product"></app-product-card>
   
@@ -98,7 +119,12 @@
       <div class="tab-pane fade" id="pills-vitiligio" role="tabpanel" aria-labelledby="pills-vitiligio-tab"
         tabindex="0">
         <div class="row justify-content-center mb-3">
-          <div *ngFor="let product of vitiligioProduct" class="products-section col-lg-3 col-md-3">
+          <div *ngIf="!vitiligioProduct ">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div *ngFor="let product of vitiligioProduct" class="products-section col-lg-3 col-md-3 col-sm-6 col-sm-6">
   
               <app-product-card [productObject]="product"></app-product-card>
   
@@ -114,7 +140,7 @@
 <!-- Products -->
 <!-- <div class="container">
     <div class="row justify-content-between mb-3">
-        <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3">
+        <div *ngFor="let product of products" class="products-section col-lg-3 col-md-3 col-sm-6">
 
             <app-product-card [productObject]="product"></app-product-card>
 

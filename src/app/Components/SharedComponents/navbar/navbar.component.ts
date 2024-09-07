@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../../../Services/authentication.service';
+import { SectionService } from '../../../Services/section.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,12 @@ import { AuthenticationService } from '../../../Services/authentication.service'
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  constructor(public _AuthService:AuthenticationService ){}
+  sectionName:string=''
+  constructor(public _AuthService:AuthenticationService , private _sectionService:SectionService){
+this.sectionName = this._sectionService.sectionName;
+
+  }
   userToken:any = localStorage.getItem("token");
+  ngOnInit(){
+  }
 }

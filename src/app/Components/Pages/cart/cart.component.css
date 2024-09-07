@@ -1,0 +1,71 @@
+
+.cards-container{
+    border: 2px solid var(--lightGray);
+    border-radius: 6px;
+    height: 320px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px 10px;
+  scrollbar-color: var(--bgColor) var(--lightGray);
+    scrollbar-width:thin;
+    
+}
+
+.card{
+    border: transparent !important;
+}
+.delete-btn{
+    position: absolute;
+    top: 10px;
+    left:10px;
+    width: auto;
+    height: auto;
+    background-color: var(--bgColor);
+    border: transparent;
+    border-radius: 50%;
+
+}
+.delete-btn:hover .fa-trash-can{
+  
+cursor: pointer;
+color: var(--secondary);
+}
+.card-body{
+    background-color: var(--bgColor);
+}
+.card-img-top{
+    height:200px;
+}
+
+.card-title{
+font-size: 12px;
+}
+
+.card-text{
+    font-size: 10px;
+}
+
+.minus,
+.prodNum,
+.plus{
+    border:1px solid var(--lightGray) !important;
+    height: 30px;
+}
+
+#checkout{
+    border-top: 3px solid var(--lightGray);
+}
+
+.estimatedTotal,
+.shipping,
+.tax,
+.subTotal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-btn{
+    display: flex;
+    justify-content: center;
+}
+

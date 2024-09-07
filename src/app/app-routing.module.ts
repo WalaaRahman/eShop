@@ -4,13 +4,14 @@ import { HomeComponent } from './Components/Pages/home/home.component';
 import { FavoriteComponent } from './Components/Pages/favorite/favorite.component';
 import { LoginComponent } from './Components/RegistrationComponents/login/login.component';
 import { CartComponent } from './Components/Pages/cart/cart.component';
+import { AuthGuard } from './Guard/auth.guard';
 
 const routes: Routes = [
-  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
 
-  {path:'favorite',component:FavoriteComponent},
-  {path:'cart',component:CartComponent},
+  {path:'favorite',canActivate: [AuthGuard],component:FavoriteComponent},
+  {path:'cart',canActivate: [AuthGuard],component:CartComponent},
   {path:'login',component:LoginComponent},
   // {path:'**',component:NotFoundComponent},
 ];

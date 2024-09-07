@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../Interfaces/product';
 import { ProductsServiceService } from '../../../Services/products-service.service';
+import { SectionService } from '../../../Services/section.service';
 
 @Component({
   selector: 'app-home',
@@ -50,9 +51,12 @@ sunProduct:Product [] =[];
 ezcemaProduct:Product [] =[];
 psoriasisProduct:Product [] =[];
 vitiligioProduct:Product [] =[];
-constructor(private _productsServiceService: ProductsServiceService){}
+
+loading:boolean = true;
+constructor(private _productsServiceService: ProductsServiceService , private _sectionService:SectionService){}
 ngOnInit(){
-  console.log("hi");
+  // console.log("hi");
+  console.log(this._sectionService.sectionName);
   
 try{
 this._productsServiceService.getProducts().subscribe({
@@ -63,8 +67,15 @@ this._productsServiceService.getProducts().subscribe({
     this.ezcemaProduct = this.products.filter((product)=>product.category === "Ezcema");
     this.psoriasisProduct = this.products.filter((product)=>product.category === "Psoriasis");
     this.vitiligioProduct = this.products.filter((product)=>product.category === "Vitiligio");
-   
-    
+    if( this.products !== null && 
+      this.sunProduct !== null &&
+      this.ezcemaProduct !== null &&
+      this.psoriasisProduct !== null &&
+      this.vitiligioProduct !== null
+     ){
+      this.loading = false;
+
+     }
   },
   error: (err) => {
     console.log(err );

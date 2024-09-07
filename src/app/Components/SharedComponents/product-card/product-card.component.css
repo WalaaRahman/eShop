@@ -58,3 +58,14 @@
     color: red;
 
 }
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .card-img-top{
+        height: 220px !important;
+    }
+}
+@media screen and (min-width:375px) and (max-width:667px) {
+    .card-img-top{
+        height: 190 !important;
+    }
+}
